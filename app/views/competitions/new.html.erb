@@ -1,0 +1,7 @@
+<%= form_for @competition do |f| %>
+    name
+    <%= f.text_field :name, class:"form-control" %>
+    summary
+    <%= f.text_field :summary, class:"form-control" %>
+    <%= f.submit "create competiton", class:"btn btn-lg btn-block btn-base-1 mt-20" %>
+<% end %>

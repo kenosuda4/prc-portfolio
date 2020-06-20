@@ -1,0 +1,11 @@
+<%= form_for @record do |f| %>
+    大会
+    <%= f.collection_select :competition_id, Competition.all, :id, :name %>
+    選手名
+    <%= f.text_field :name, class:"form-control" %>
+    タイム
+    <%= f.number_field :total_time, step: '0.01', class:"form-control" %>
+
+
+    <%= f.submit "create record", class:"btn btn-lg btn-block btn-base-1 mt-20" %>
+<% end %>

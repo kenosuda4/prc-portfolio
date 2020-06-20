@@ -1,0 +1,18 @@
+<%= @competition.name %>
+<%= link_to 'record', new_record_path %>
+<% @records.each do |record| %>
+    
+     <table>
+        <tr>
+            <td>  
+                <%= link_to record.name, record_path(record) %>
+            </td>
+            <td>
+               <%= record.total_time %>
+            </td>
+        </tr>
+    </table>
+
+    
+<% end %>
+<%= bar_chart @record_date %>
