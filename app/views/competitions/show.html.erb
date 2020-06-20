@@ -15,4 +15,4 @@
 
     
 <% end %>
-<%= bar_chart @record_date %>
+<%= bar_chart @record_date.group_by_day(:created_at).sum(:total_time), width: "800px", height: "300px" %>
