@@ -15,4 +15,4 @@
 
     
 <% end %>
-<%= area_chart @menu_date %>
+<%= area_chart @menus.pluck(:created_at,:total_distance), max: 12000 %>
