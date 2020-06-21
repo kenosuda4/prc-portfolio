@@ -13,7 +13,7 @@ class MenusController < ApplicationController
     def create
       @menu = Menu.new(menu_params)
       @menu.save
-      redirect_to record_path(@menu)
+      redirect_to menu_path(@menu)
     end
   
     def show
@@ -32,8 +32,8 @@ class MenusController < ApplicationController
       params.require(:menu).permit(:name, :total_distance, :ditail,)
     end
   
-    def set_record
-      @menu = menu.find(params[:id])
+    def set_menu
+      @menu = Menu.find(params[:id])
     end
   
   

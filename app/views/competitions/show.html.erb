@@ -15,4 +15,5 @@
 
     
 <% end %>
-<%= bar_chart @record_date.group_by_day(:created_at).sum(:total_time), width: "800px", height: "300px" %>
+<%= line_chart @record_date.pluck(:created_at,:total_time), max: 60,title: "total distance" %>
+ <!--x軸y軸の設定はpluck(:x軸,：y軸)でいけるy-->
