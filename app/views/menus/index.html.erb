@@ -1,2 +1,18 @@
-<h1>Menus#index</h1>
-<p>Find me in app/views/menus/index.html.erb</p>
+
+<%= link_to 'new', new_menu_path %>
+<% @menus.each do |menu| %>
+    
+     <table>
+        <tr>
+            <td>  
+                <%= link_to menu.name, menu_path(menu) %>
+            </td>
+            <td>
+               <%= menu.total_distance %>
+            </td>
+        </tr>
+    </table>
+
+    
+<% end %>
+<%= line_chart @menu_date %>

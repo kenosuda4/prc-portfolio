@@ -70,7 +70,7 @@ gem "refile-mini_magick"
 gem "jquery-rails"
 
 gem 'bootstrap'
-gem 'summernote-rails'
-gem 'simple_form'
+
+
 
 gem "chartkick"

@@ -1,2 +1,11 @@
-<h1>Menus#new</h1>
-<p>Find me in app/views/menus/new.html.erb</p>
+<%= form_for @menu do |f| %>
+    メニュー名
+    <%= f.text_field :name, class:"form-control" %>
+    内容
+    <%= f.text_field :detail, class:"form-control" %>
+    距離
+    <%= f.number_field :total_distance, class:"form-control" %>
+
+
+    <%= f.submit "create record", class:"btn btn-lg btn-block btn-base-1 mt-20" %>
+<% end %>
