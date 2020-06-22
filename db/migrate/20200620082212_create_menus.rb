@@ -4,6 +4,7 @@ class CreateMenus < ActiveRecord::Migration[5.2]
       t.string :name
       t.text :detail
       t.integer :total_distance
+      t.string :image
 
       t.timestamps
     end

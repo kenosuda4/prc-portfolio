@@ -9,11 +9,12 @@ class MenusController < ApplicationController
     def new
       @menu = Menu.new
     end
-  
+    require 'pry'
     def create
       @menu = Menu.new(menu_params)
+      binding.pry
       @menu.save
-      redirect_to menu_path(@menu)
+      redirect_to menus_path
     end
   
     def show
@@ -24,12 +25,12 @@ class MenusController < ApplicationController
   
     def update
       @menu.update(menu_params)
-      redirect_to menu_path(@menu)
+      redirect_to menus_path
     end
   
     private
     def menu_params
-      params.require(:menu).permit(:name, :total_distance, :ditail,)
+      params.require(:menu).permit(:name, :detail, :total_distance, :image)
     end
   
     def set_menu

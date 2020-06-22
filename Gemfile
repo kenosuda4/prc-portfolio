@@ -71,6 +71,9 @@ gem "jquery-rails"
 
 gem 'bootstrap'
 
+gem 'carrierwave'
+gem 'mini_magick'
 
+gem 'pry-byebug'
 
 gem "chartkick"
