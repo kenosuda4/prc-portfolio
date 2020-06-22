@@ -18,7 +18,6 @@ class CompetitionsController < ApplicationController
 
   def show
     @records = @competition.records.all
-    @record_date = @competition.records.all
   end
 
   def edit

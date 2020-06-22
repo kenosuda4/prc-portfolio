@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_20_032024) do
+ActiveRecord::Schema.define(version: 2020_06_20_082212) do
 
   create_table "competitions", force: :cascade do |t|
     t.string "name"
@@ -19,10 +19,19 @@ ActiveRecord::Schema.define(version: 2020_06_20_032024) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "menus", force: :cascade do |t|
+    t.string "name"
+    t.text "detail"
+    t.integer "total_distance"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "records", force: :cascade do |t|
     t.integer "competition_id"
     t.string "name"
-    t.float "total_time"
+    t.datetime "total_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
